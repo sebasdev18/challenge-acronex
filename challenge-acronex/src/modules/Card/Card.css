@@ -1,0 +1,58 @@
+.fondo {
+  background-color: #e4e4e4;
+}
+.tarjeta {
+  border: 5px solid black;
+  background-color: #ffffff;
+  width: 20rem;
+}
+
+.circulo {
+  border-radius: 50%;
+  background-color: green;
+  width: 30px;
+  height: 30px;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  width: 10%;
+}
+
+.encabezado {
+  border: 2px solid red;
+  display: flex;
+}
+
+.datos {
+  display: grid;
+}
+
+.datos-arriba {
+  display: flex;
+  width: auto;
+}
+
+.datos-abajo {
+  display: flex;
+  width: auto;
+}
+
+.taponamiento {
+  border: 2px solid black;
+  width: 50%;
+}
+
+.evaporacion {
+  border: 2px solid black;
+  width: 50%;
+}
+
+.per-viento {
+  border: 2px solid black;
+  width: 50%;
+}
+
+.calidad {
+  border: 2px solid black;
+  width: 50%;
+}
