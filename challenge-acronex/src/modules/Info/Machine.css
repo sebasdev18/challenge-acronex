@@ -13,6 +13,13 @@
   background-color: #ffffff;
   width: 40rem;
   height: 30rem;
+  overflow: hidden;
+}
+
+.abajo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .encabezado {
@@ -32,4 +39,16 @@
 
 .abajo {
   display: flex;
+}
+
+.encabezado-caja {
+  background-color: gray;
+  border: 1px solid black;
+}
+
+.cuerpo-caja {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
