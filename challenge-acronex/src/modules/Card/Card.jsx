@@ -1,25 +1,40 @@
 import React from "react";
 import "./Card.css";
+import { Link } from "react-router-dom";
 
-export default function card() {
+export default function card({ item }) {
   return (
     <div className="fondo">
       <div className="tarjeta">
         <div className="encabezado">
           <div className="circulo"></div>
           <div className="datos-encabezado">
-            <p>(1232134) maquina cosechadora</p>
-            <p>Empresa</p>
+            <p>
+              ({item.id}) {item.description}
+            </p>
+            <p>{item.company}</p>
           </div>
         </div>
         <div className="datos">
           <div className="datos-arriba">
-            <div className="taponamiento">taponamiento</div>
-            <div className="evaporacion">evaporacion</div>
+            <div className="taponamiento">
+              <p>Taponamiento</p>
+              <p>{item.indicadores.taponamiento}</p>
+            </div>
+            <div className="evaporacion">
+              <p>Evaporacion</p>
+              <p>{item.indicadores.evaporacion}</p>
+            </div>
           </div>
           <div className="datos-abajo">
-            <div className="per-viento">viento</div>
-            <div className="calidad">calidad</div>
+            <div className="per-viento">
+              <p>Viento</p>
+              <p>{item.indicadores.deriva}</p>
+            </div>
+            <div className="calidad">
+              <p>Calidad</p>
+              <p>{item.indicadores.calidad}</p>
+            </div>
           </div>
         </div>
       </div>
