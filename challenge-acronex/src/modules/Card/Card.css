@@ -4,12 +4,12 @@
   flex-direction: row;
 }
 .tarjeta {
-  border: 5px solid black;
+  border: 1px solid black;
   background-color: #ffffff;
   width: 20rem;
 }
 
-.circulo {
+.circulo-verde {
   border-radius: 50%;
   background-color: green;
   width: 30px;
@@ -19,9 +19,19 @@
   margin-left: 1rem;
   width: 10%;
 }
+.circulo-rojo {
+  border-radius: 50%;
+  background-color: red;
+  width: 30px;
+  height: 30px;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  width: 10%;
+}
 
 .encabezado {
-  border: 2px solid red;
+  border: 1px solid red;
   display: flex;
 }
 
@@ -40,7 +50,7 @@
 }
 
 .taponamiento {
-  border: 2px solid black;
+  border: 1px solid black;
   width: 50%;
 }
 
@@ -50,11 +60,11 @@
 }
 
 .per-viento {
-  border: 2px solid black;
+  border: 1px solid black;
   width: 50%;
 }
 
 .calidad {
-  border: 2px solid black;
+  border: 1px solid black;
   width: 50%;
 }

@@ -1,13 +1,14 @@
 import React from "react";
 import "./Card.css";
 import { Link } from "react-router-dom";
+import Machine from "../Info/Machine";
 
 export default function card({ item }) {
   return (
     <div className="fondo">
       <div className="tarjeta">
         <div className="encabezado">
-          <div className="circulo"></div>
+          <div className={item.moving ? "circulo-verde" : "circulo-rojo"}></div>
           <div className="datos-encabezado">
             <p>
               ({item.id}) {item.description}
