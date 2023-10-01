@@ -63,8 +63,18 @@
   border: 1px solid black;
   width: 50%;
 }
+.rinde-humedo {
+  border: 1px solid black;
+  background-color: green;
+  width: 50%;
+}
 
 .calidad {
+  border: 1px solid black;
+  width: 50%;
+}
+.rinde-seco {
+  background-color: #b3d838;
   border: 1px solid black;
   width: 50%;
 }

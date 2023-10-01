@@ -1,7 +1,9 @@
 import React from "react";
 import "./Machine.css";
+import { useParams } from "react-router-dom";
 
 export default function Machine() {
+  const id = useParams();
   return (
     <>
       <div className="fondo">

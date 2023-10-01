@@ -19,9 +19,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Routes>
-          <Route path="/machines?q=" element={<App />} />
-        </Routes>
+        <Routes></Routes>
       </BrowserRouter>
       <NavBar />
       <div className="grilla">
