@@ -13,6 +13,56 @@ export default function card({ item }) {
   let rinde_humedo = item.indicadores.rinde_humedo + "kg/ha";
   let rinde_seco = item.indicadores.rinde_seco + "kg/ha";
 
+  var colores = [
+    "#008000",
+    "#FFFF00",
+    "FFA500",
+    "#FF0000",
+    "#8B0000",
+    "#e4e4e4",
+  ];
+
+  function coloresBack() {
+    if (item.indicadores.cultivo || item.indicadores.humedad_grano) {
+      return colores[5];
+    } else if (
+      (item.indicadores.taponamiento ||
+        item.indicadores.evaporacion ||
+        item.indicadores.deriva ||
+        item.indicadores.calidad) <= 0.0
+    ) {
+      return colores[0];
+    } else if (
+      (item.indicadores.taponamiento ||
+        item.indicadores.evaporacion ||
+        item.indicadores.deriva ||
+        item.indicadores.calidad) <= 0.1
+    ) {
+      return colores[1];
+    } else if (
+      (item.indicadores.taponamiento ||
+        item.indicadores.evaporacion ||
+        item.indicadores.deriva ||
+        item.indicadores.calidad) <= 0.2
+    ) {
+      return colores[2];
+    } else if (
+      (item.indicadores.taponamiento ||
+        item.indicadores.evaporacion ||
+        item.indicadores.deriva ||
+        item.indicadores.calidad) <= 0.35
+    ) {
+      return colores[3];
+    } else if (
+      (item.indicadores.taponamiento ||
+        item.indicadores.evaporacion ||
+        item.indicadores.deriva ||
+        item.indicadores.calidad) > 0.35
+    ) {
+      return colores[4];
+    }
+  }
+
   return (
     <div className="fondo">
       <div className="tarjeta">
@@ -27,7 +77,10 @@ export default function card({ item }) {
         </div>
         <div className="datos">
           <div className="datos-arriba">
-            <div className="taponamiento">
+            <div
+              className="taponamiento"
+              style={{ backgroundColor: coloresBack() }}
+            >
               <p>
                 {!item.indicadores.taponamiento ? "Cultivo" : "Taponamiento"}
               </p>
