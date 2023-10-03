@@ -86,7 +86,10 @@ export default function card({ item }) {
               </p>
               {!item.indicadores.taponamiento ? cultivo : taponamiento}
             </div>
-            <div className="evaporacion">
+            <div
+              className="evaporacion"
+              style={{ backgroundColor: coloresBack() }}
+            >
               <p>
                 {!item.indicadores.evaporacion
                   ? "Humedad grano"
